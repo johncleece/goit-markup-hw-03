@@ -48,6 +48,8 @@ header {
     padding: 24px 0;
     display: flex;
     justify-content: space-around;
+    margin: auto;
+    border: 1px solid var(--cornflower-color);
 
 }
 
@@ -71,7 +73,8 @@ header {
 
 /* Navigation Menu List */
 .heading-navigation {
-    display: flex;
+    display: inline-flex;
+    justify-content: flex-start;
 }
 
 .navigation-menu {
@@ -84,7 +87,8 @@ header {
 }
 
 .contact-links {
-    display: flex;
+    display: inline-flex;
+    justify-content: flex-end;
 
 }
 
@@ -160,16 +164,20 @@ header {
 
 /* Studio Section 2 Styling */
 .section {
-    padding: 120px 0;
+    padding: 120px 156px 0;
 }
 
 .container {
-    width: 1158px;
-    margin: auto;
+    margin: 0;
 }
 
 .benefits {
-    column-count: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1158px;
+    margin: auto;
+
 }
 
 .benefits-title {
@@ -178,6 +186,7 @@ header {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.4px;
+    margin: 0;
 }
 
 .benefits-description {
@@ -190,6 +199,15 @@ header {
 
 
 /* Studio Section 3 Styling */
+.services-list {
+    width: 1158px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 120px;
+    margin: auto;
+}
+
 .section-title {
     color: var(--navy-blue-color);
     font-size: var(--heading-two);
@@ -197,16 +215,39 @@ header {
     line-height: 1.5;
     text-transform: capitalize;
     letter-spacing: 0.72px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 72px;
 
 }
 
 /* Studio Section 4 Styling */
+.our-team_list {
+    width: 1158px;
+    column-count: 4;
+    margin: auto;
+    padding-bottom: 120px;
+}
+
+.our-team-list_item {
+    flex-direction: column;
+    background-color: var(--white-color);
+    padding-bottom: 32px;
+    width: 264px;
+    margin: 0;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 .our-team_title {
     font-size: var(--heading-three);
     color: var(--navy-blue-color);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.4px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 0;
 }
 
 .our-team_description {
@@ -214,6 +255,9 @@ header {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 0;
 }
 
 .section-background {
@@ -254,12 +298,39 @@ header {
     border: 1px solid var(--ocean-color);
 }
 
+.filter-list {
+    width: 1158px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.filter-list_item {
+    padding-right: 24px;
+}
+
+.project {
+    width: 1158px;
+    padding-top: 72px;
+    padding-bottom: 120px;
+    column-count: 3;
+    margin: auto;
+}
+
+.project_item {
+    width: 360px;
+    margin-bottom: 48px;
+    border: 1px solid var(--cornflower-color);
+}
+
 .project-title {
     color: var(--navy-blue-color);
     font-size: var(--heading-three);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.4px;
+    margin: 32px 0px 16px 16px;
+
 }
 
 .project-description {
@@ -267,12 +338,24 @@ header {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.32px;
+    margin: 8px 32px 16px 16px;
 }
 
+
+
+
+
+
+
 /* Footer Styling */
+.footer .container {
+    width: 1158px;
+    margin: auto;
+}
 
 .footer {
     background-color: var(--navy-blue-color);
+    padding: 100px 0;
 }
 
 .footer-text {
