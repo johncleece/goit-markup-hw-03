@@ -19,11 +19,13 @@
 }
 
 body {
-    margin: 0;
     font-family: var(--font-family-roboto);
     color: var(--slate-color);
     line-height: 1.5em;
+    margin: 0;
+    box-sizing: content-box;
 }
+
 
 button {
     cursor: pointer;
@@ -42,6 +44,13 @@ a {
 }
 
 /* Heading CSS */
+header {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
 .heading-web_word {
     font-family: var(--font-family-raleway);
     font-weight: 800;
@@ -61,7 +70,23 @@ a {
 }
 
 /* Navigation Menu List */
+.heading-navigation {
+    display: flex;
+}
 
+.navigation-menu {
+    display: inline-flex;
+    padding-left: 76px;
+}
+
+.navigation-menu_item {
+    padding-right: 40px;
+}
+
+.contact-links {
+    display: flex;
+
+}
 
 .navigation-menu_link {
     color: var(--navy-blue-color);
@@ -73,12 +98,17 @@ a {
 .contact-links_link {
     color: var(--slate-color);
     font-size: 16px;
-
+    padding-left: 40px;
 }
 
 .navigation-menu_link:hover,
 .contact-links_link:hover {
     color: var(--iris-color);
+}
+
+.navigation-menu_link:focus,
+.contact-links_link:focus {
+    color: var(--ocean-color);
 }
 
 .link-active {
@@ -90,6 +120,8 @@ a {
 /* Studio Hero Section Styling */
 .hero {
     background-color: var(--navy-blue-color);
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -98,6 +130,7 @@ a {
     line-height: 1.2;
     color: var(--white-color);
     letter-spacing: 1.12px;
+    text-align: center;
 }
 
 .hero-button {
@@ -120,8 +153,24 @@ a {
     background-color: var(--ocean-color);
 }
 
+.hero .hero-button {
+    display: flex;
+    margin: auto;
+}
 
 /* Studio Section 2 Styling */
+.section {
+    padding: 120px 0;
+}
+
+.container {
+    width: 1158px;
+    margin: auto;
+}
+
+.benefits {
+    column-count: 4;
+}
 
 .benefits-title {
     font-size: var(--heading-three);
