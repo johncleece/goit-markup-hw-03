@@ -1,6 +1,140 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap');
 
+
+/* Start of Modern Normalize CSS */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+
+}
+
+hr {
+    height: 0;
+    color: inherit;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+table {
+    text-indent: 0;
+    border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+legend {
+    padding: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type='search'] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+summary {
+    display: list-item;
+}
+
+/* End of Modern Normalize CSS */
+
+
 :root {
     --navy-blue-color: #2E2F42;
     --slate-color: #434455;
@@ -23,9 +157,7 @@ body {
     color: var(--slate-color);
     line-height: 1.5em;
     margin: 0;
-    box-sizing: content-box;
 }
-
 
 button {
     cursor: pointer;
@@ -41,6 +173,15 @@ a {
     text-decoration: none;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    width: 1158px;
+    margin: auto;
+}
+
+.section {
+    padding: 120px 0;
 }
 
 /* Heading CSS */
@@ -74,7 +215,11 @@ header {
 /* Navigation Menu List */
 .heading-navigation {
     display: inline-flex;
-    justify-content: flex-start;
+}
+
+.contact-links {
+    display: inline-flex;
+    padding-left: 250px;
 }
 
 .navigation-menu {
@@ -84,12 +229,6 @@ header {
 
 .navigation-menu_item {
     padding-right: 40px;
-}
-
-.contact-links {
-    display: inline-flex;
-    justify-content: flex-end;
-
 }
 
 .navigation-menu_link {
@@ -135,6 +274,7 @@ header {
     color: var(--white-color);
     letter-spacing: 1.12px;
     text-align: center;
+    margin-bottom: 48px;
 }
 
 .hero-button {
@@ -163,21 +303,14 @@ header {
 }
 
 /* Studio Section 2 Styling */
-.section {
-    padding: 120px 156px 0;
-}
-
-.container {
-    margin: 0;
-}
-
 .benefits {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 1158px;
-    margin: auto;
+}
 
+.benefits_item {
+    padding-right: 24px;
 }
 
 .benefits-title {
@@ -196,16 +329,15 @@ header {
     letter-spacing: 0.32px;
 }
 
-
+.benefits-section {
+    padding-bottom: 0;
+}
 
 /* Studio Section 3 Styling */
 .services-list {
-    width: 1158px;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-bottom: 120px;
-    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .section-title {
@@ -223,10 +355,9 @@ header {
 
 /* Studio Section 4 Styling */
 .our-team_list {
-    width: 1158px;
-    column-count: 4;
-    margin: auto;
-    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .our-team-list_item {
@@ -260,12 +391,15 @@ header {
     margin-bottom: 0;
 }
 
-.section-background {
+.our-team-section {
     background-color: var(--cloud-color);
 }
 
 
 /* Portfolio Page Styling */
+.tab-menu-section {
+    padding-top: 96px;
+}
 
 .tab-button {
     color: var(--iris-color);
@@ -299,10 +433,9 @@ header {
 }
 
 .filter-list {
-    width: 1158px;
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin-bottom: 24px;
 }
 
 .filter-list_item {
@@ -310,16 +443,14 @@ header {
 }
 
 .project {
-    width: 1158px;
-    padding-top: 72px;
-    padding-bottom: 120px;
-    column-count: 3;
-    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project_item {
     width: 360px;
-    margin-bottom: 48px;
+    margin-top: 48px;
     border: 1px solid var(--cornflower-color);
 }
 
@@ -346,13 +477,7 @@ header {
 
 
 
-
 /* Footer Styling */
-.footer .container {
-    width: 1158px;
-    margin: auto;
-}
-
 .footer {
     background-color: var(--navy-blue-color);
     padding: 100px 0;
