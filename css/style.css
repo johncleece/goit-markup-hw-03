@@ -181,6 +181,7 @@ a {
     line-height: 1.2;
     color: var(--white-color);
     letter-spacing: 1.12px;
+    margin-bottom: 48px;
 }
 
 .hero-button {
