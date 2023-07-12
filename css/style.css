@@ -224,7 +224,7 @@ a {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.4px;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 
 .benefits-description {
@@ -289,7 +289,7 @@ a {
     letter-spacing: 0.4px;
     text-align: center;
     margin-top: 32px;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .our-team_description {
@@ -298,8 +298,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.32px;
     text-align: center;
-    margin-top: 8px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .our-team-section {
